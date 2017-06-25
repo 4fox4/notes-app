@@ -1,0 +1,21 @@
+<body>
+  <div class="container">
+    <header>
+      <h1 class="app-title">Notes App</h1>
+    </header>
+
+    <form class="new-note">
+      <input class="new-note-input" type="text" name="text" placeholder="Add new note" />
+    </form>
+
+    <div class="mdl-grid">
+      {{#each notes}}
+        {{> note}}
+      {{/each}}
+    </div>
+  </div>
+</body>
+
+<template name="note">
+  <div class="mdl-cell mdl-cell--4-col note-item" style={{color}}>{{text}}</div>
+</template>
